@@ -410,8 +410,8 @@
     </div>
 
     <div class="footer">
-        <p> <strong>AHMII</strong> • CYBER TESTING FRAMEWORK • EDUCATIONAL USE </p>
-        <p>© 2026 — Premium SMS Security Testing</p>
+        <p> <strong>AHMII</strong> Â• CYBER TESTING FRAMEWORK Â• EDUCATIONAL USE </p>
+        <p>Â© 2026 Â— Premium SMS Security Testing</p>
     </div>
 </div>
 
@@ -459,7 +459,7 @@
     }
 
     function clearLogs() {
-        liveLogDiv.innerHTML = '<div class="log-entry"><i class="fas fa-info-circle"></i> Attack launched — tracking messages...</div>';
+        liveLogDiv.innerHTML = '<div class="log-entry"><i class="fas fa-info-circle"></i> Attack launched Â— tracking messages...</div>';
     }
 
     function convertToInternational(num) {
@@ -580,7 +580,7 @@
         
         document.querySelector('.premium-card')?.classList.add('attacking');
         showToast(` Attack started on ${international}`, 'success');
-        addLog(` LAUNCH — Target: ${international} | Total: ${amount} SMS`, true);
+        addLog(` LAUNCH Â— Target: ${international} | Total: ${amount} SMS`, true);
 
         for (let i = 1; i <= amount; i++) {
             if (stopRequested || !isAttacking) {
@@ -615,10 +615,10 @@
         if (!stopRequested && isAttacking) {
             if (successTotal > 0) {
                 showToast(` Complete! ${successTotal}/${sent} messages delivered (${successRate}%)`, 'success');
-                addLog(` FINISHED — Delivered: ${successTotal}/${sent} | Success rate: ${successRate}%`, true);
+                addLog(` FINISHED Â— Delivered: ${successTotal}/${sent} | Success rate: ${successRate}%`, true);
             } else {
-                showToast(` Attack finished — 0 messages delivered. Target may be invalid.`, 'error');
-                addLog(` ZERO delivery — target number may be invalid or API issue`, false);
+                showToast(` Attack finished Â— 0 messages delivered. Target may be invalid.`, 'error');
+                addLog(` ZERO delivery Â— target number may be invalid or API issue`, false);
             }
         }
 
@@ -632,7 +632,7 @@
         if (!isAttacking) return;
         stopRequested = true;
         isAttacking = false;
-        addLog(` ABORT signal sent — stopping remaining messages`, false);
+        addLog(` ABORT signal sent Â— stopping remaining messages`, false);
         showToast('Aborting attack...', 'error');
         resetUI();
         progressArea.style.display = 'none';
